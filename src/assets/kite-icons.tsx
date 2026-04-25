@@ -11,22 +11,22 @@ export const KiteIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
       </linearGradient>
     </defs>
     {/* Main kite body - diamond shape */}
-    <path d="M32 4 L56 32 L32 60 L8 32 Z" fill="url(#kiteGradient1)" stroke="#075985" strokeWidth="2"/>
+    <path d="M32 4 L56 32 L32 60 L8 32 Z" fill="url(#kiteGradient1)" stroke="#075985" strokeWidth="2" className="group-hover:fill-white group-hover:stroke-white transition-colors duration-300"/>
     {/* Center vertical line */}
-    <line x1="32" y1="4" x2="32" y2="60" stroke="#075985" strokeWidth="1.5"/>
+    <line x1="32" y1="4" x2="32" y2="60" stroke="#075985" strokeWidth="1.5" className="group-hover:stroke-white transition-colors duration-300"/>
     {/* Horizontal line */}
-    <line x1="8" y1="32" x2="56" y2="32" stroke="#075985" strokeWidth="1.5"/>
+    <line x1="8" y1="32" x2="56" y2="32" stroke="#075985" strokeWidth="1.5" className="group-hover:stroke-white transition-colors duration-300"/>
     {/* Diagonal lines for detail */}
-    <line x1="32" y1="4" x2="56" y2="32" stroke="#7DD3FC" strokeWidth="0.5" opacity="0.5"/>
-    <line x1="32" y1="4" x2="8" y2="32" stroke="#7DD3FC" strokeWidth="0.5" opacity="0.5"/>
-    <line x1="32" y1="60" x2="56" y2="32" stroke="#7DD3FC" strokeWidth="0.5" opacity="0.5"/>
-    <line x1="32" y1="60" x2="8" y2="32" stroke="#7DD3FC" strokeWidth="0.5" opacity="0.5"/>
+    <line x1="32" y1="4" x2="56" y2="32" stroke="#7DD3FC" strokeWidth="0.5" opacity="0.5" className="group-hover:stroke-white transition-colors duration-300"/>
+    <line x1="32" y1="4" x2="8" y2="32" stroke="#7DD3FC" strokeWidth="0.5" opacity="0.5" className="group-hover:stroke-white transition-colors duration-300"/>
+    <line x1="32" y1="60" x2="56" y2="32" stroke="#7DD3FC" strokeWidth="0.5" opacity="0.5" className="group-hover:stroke-white transition-colors duration-300"/>
+    <line x1="32" y1="60" x2="8" y2="32" stroke="#7DD3FC" strokeWidth="0.5" opacity="0.5" className="group-hover:stroke-white transition-colors duration-300"/>
     {/* Kite tail */}
-    <path d="M32 60 Q 28 68 34 76 Q 30 82 36 90" stroke="#0EA5E9" strokeWidth="2" fill="none" strokeLinecap="round"/>
+    <path d="M32 60 Q 28 68 34 76 Q 30 82 36 90" stroke="#0EA5E9" strokeWidth="2" fill="none" strokeLinecap="round" className="group-hover:stroke-white transition-colors duration-300"/>
     {/* Tail bows */}
-    <circle cx="32" cy="60" r="3" fill="#F5A623"/>
-    <circle cx="30" cy="70" r="2" fill="#F5A623"/>
-    <circle cx="34" cy="80" r="2" fill="#F5A623"/>
+    <circle cx="32" cy="60" r="3" fill="#F5A623" className="group-hover:fill-white transition-colors duration-300"/>
+    <circle cx="30" cy="70" r="2" fill="#F5A623" className="group-hover:fill-white transition-colors duration-300"/>
+    <circle cx="34" cy="80" r="2" fill="#F5A623" className="group-hover:fill-white transition-colors duration-300"/>
   </svg>
 );
 
