@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 199 89% 96%;
+    --foreground: 199 84% 15%;
+    --card: 199 89% 96%;
+    --card-foreground: 199 84% 15%;
+    --popover: 199 89% 96%;
+    --popover-foreground: 199 84% 15%;
+    --primary: 199 89% 40%;
+    --primary-foreground: 199 89% 98%;
+    --secondary: 199 76% 53%;
+    --secondary-foreground: 199 89% 98%;
+    --muted: 199 44% 90%;
+    --muted-foreground: 199 40% 40%;
+    --accent: 199 76% 60%;
+    --accent-foreground: 199 89% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 199 44% 80%;
+    --input: 199 44% 80%;
+    --ring: 199 89% 40%;
+  }
+
+  .dark {
+    --background: 199 84% 10%;
+    --foreground: 199 44% 95%;
+    --card: 199 84% 12%;
+    --card-foreground: 199 44% 95%;
+    --popover: 199 84% 10%;
+    --popover-foreground: 199 44% 95%;
+    --primary: 199 76% 53%;
+    --primary-foreground: 199 84% 10%;
+    --secondary: 199 89% 50%;
+    --secondary-foreground: 199 89% 98%;
+    --muted: 199 40% 20%;
+    --muted-foreground: 199 44% 70%;
+    --accent: 199 76% 55%;
+    --accent-foreground: 199 89% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 199 40% 30%;
+    --input: 199 40% 30%;
+    --ring: 199 76% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E0F2FE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0EA5E9;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284C7;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Parallax effect for background */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Kite flying animation */
+.kite-float {
+  animation: kite-float 6s ease-in-out infinite;
+}
+
+@keyframes kite-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) translateX(5px) rotate(3deg);
+  }
+  50% {
+    transform: translateY(-25px) translateX(10px) rotate(5deg);
+  }
+  75% {
+    transform: translateY(-15px) translateX(5px) rotate(3deg);
+  }
+}
+
+/* Cloud drift animation */
+.cloud-drift {
+  animation: cloud-drift 20s linear infinite;
+}
+
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100%));
+  }
+}
+
+/* String wiggle animation */
+.string-wiggle {
+  animation: string-wiggle 3s ease-in-out infinite;
+}
+
+@keyframes string-wiggle {
+  0%, 100% {
+    transform: translateX(0) skewX(0deg);
+  }
+  25% {
+    transform: translateX(-3px) skewX(1deg);
+  }
+  75% {
+    transform: translateX(3px) skewX(-1deg);
+  }
+}
+
+/* Glow effect for buttons */
+.glow-effect {
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 40px rgba(14, 165, 233, 0.5);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 50%, #7DD3FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Pulse ring effect */
+.pulse-ring {
+  position: relative;
+}
+
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border: 2px solid #0EA5E9;
+  border-radius: 50%;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Shimmer effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Hero section styling */
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(224, 242, 254, 0) 0%,
+    rgba(224, 242, 254, 0.8) 50%,
+    rgba(224, 242, 254, 1) 100%
+  );
+}
+
+/* Card hover glow */
+.card-glow {
+  transition: all 0.4s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
+}
+
+/* Custom selection color */
+::selection {
+  background: #0EA5E9;
+  color: white;
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0EA5E9;
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Focus visible styles */
+*:focus-visible {
+  outline: 2px solid #0EA5E9;
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
