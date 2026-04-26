@@ -101,7 +101,7 @@ export const AboutSection = () => {
         <div className={`mt-16 text-center transition-all duration-700 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-block bg-gradient-to-r from-sky-100 to-sky-50 rounded-2xl px-8 py-6">
             <p className="text-sky-700 font-medium">
-              Owned and operated by <span className="text-sky-900 font-bold">Richard Hawkins</span>
+              Owned and operated by <span className="text-sky-900 font-bold">Richard Hawkins & Jamie Hawkins</span>
             </p>
           </div>
         </div>
