@@ -1,4 +1,4 @@
-import { AboutKitesLogo, SocialMediaButtons, FacebookIcon, PhoneIcon, MailIcon } from '../assets/kite-icons';
+import { AboutKitesLogo, SocialMediaButtons, PhoneIcon, MailIcon } from '../assets/kite-icons';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -90,17 +90,29 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.facebook.com/share/1ArmavyhAb/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:713-836-1554"
                   className="flex items-center gap-3 text-sky-300 hover:text-white transition-colors duration-300 group"
                 >
                   <div className="p-2 bg-sky-800 group-hover:bg-sky-700 rounded-lg transition-colors">
-                    <FacebookIcon className="w-5 h-5" />
+                    <PhoneIcon className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-sky-400">Facebook</p>
-                    <p className="font-medium">Follow Us</p>
+                    <p className="text-sm text-sky-400">Co-Owner Phone</p>
+                    <p className="font-medium">713-836-1554</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:coresec2020@gmail.com"
+                  className="flex items-center gap-3 text-sky-300 hover:text-white transition-colors duration-300 group"
+                >
+                  <div className="p-2 bg-sky-800 group-hover:bg-sky-700 rounded-lg transition-colors">
+                    <MailIcon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-sky-400">Co-Owner Email</p>
+                    <p className="font-medium">coresec2020@gmail.com</p>
                   </div>
                 </a>
               </li>
@@ -117,7 +129,7 @@ export const Footer = () => {
             © {currentYear} About Kites. All rights reserved.
           </p>
           <p className="text-sky-400 text-sm">
-            Owned by <span className="text-sky-300 font-medium">Richard Hawkins</span>
+            Owned by <span className="text-sky-300 font-medium">Richard Hawkins & Jamie Hawkins</span>
           </p>
         </div>
 
